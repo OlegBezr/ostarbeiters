@@ -1,5 +1,7 @@
+import 'package:ostarbeiters/models/multilanguage_text.dart';
+
 class StoryPart {
-  String text;
+  MultilanguageText text;
   String imageAsset;
 
   StoryPart(this.text, this.imageAsset);
@@ -8,17 +10,17 @@ class StoryPart {
 class LinearPart extends StoryPart {
   StoryPart nextStoryPart;
 
-  LinearPart(String text, String imageAsset, {this.nextStoryPart}) : super(text, imageAsset);
+  LinearPart(MultilanguageText text, String imageAsset, {this.nextStoryPart}) : super(text, imageAsset);
 }
 
 class ChoicePart extends StoryPart {
-  String aAnswer;
-  String bAnswer;
+  MultilanguageText aAnswer;
+  MultilanguageText bAnswer;
   StoryPart aStoryPart;
   StoryPart bStoryPart;
 
   ChoicePart(
-    String text, String imageAsset,
+    MultilanguageText text, String imageAsset,
     {
       this.aAnswer,
       this.bAnswer,

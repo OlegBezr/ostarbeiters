@@ -1,11 +1,11 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:ostarbeiters/models/app_state.dart';
 import 'package:ostarbeiters/models/story_part.dart';
-import 'package:ostarbeiters/story.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:provider/provider.dart';
 
 class StoryPartWidget extends StatelessWidget {
-  StoryPartWidget({this.storyPart});
+  StoryPartWidget(this.storyPart);
   
   final StoryPart storyPart;
 
@@ -24,7 +24,7 @@ class StoryPartWidget extends StatelessWidget {
   }
 
 
-  Widget storyTextWidget() {
+  Widget storyTextWidget(AppState appState) {
     return Container(
       width: 300,
       padding: EdgeInsets.all(20),
@@ -43,19 +43,21 @@ class StoryPartWidget extends StatelessWidget {
           fontFamily: 'Agne',
         ),
         child: Text(
-          storyPart.text
+          storyPart.text.translations[appState.language]
         ),
       ),
     );
   }
 
   Widget linearStoryWidget(BuildContext context, LinearPart linearPart) {
+    var appState = Provider.of<AppState>(context);
+
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
       onTap: () {
         Navigator.of(context).pushReplacement(
           PageTransition(
-            child: StoryPartWidget(storyPart: linearPart.nextStoryPart),
+            child: StoryPartWidget(linearPart.nextStoryPart),
             type: PageTransitionType.fade
           )
         );
@@ -69,7 +71,7 @@ class StoryPartWidget extends StatelessWidget {
               Container(
                 height: MediaQuery.of(context).size.height / 5,
               ),
-              storyTextWidget(),
+              storyTextWidget(appState),
               Expanded(child: Container(), flex: 2),
             ],
           ),
@@ -79,6 +81,8 @@ class StoryPartWidget extends StatelessWidget {
   }
 
   Widget choiceStoryWidget(BuildContext context, ChoicePart choicePart) {
+    var appState = Provider.of<AppState>(context);
+
     return Container(
       child: Padding(
         padding: const EdgeInsets.all(40.0),
@@ -88,33 +92,33 @@ class StoryPartWidget extends StatelessWidget {
             Container(
               height: MediaQuery.of(context).size.height / 5,
             ),
-            storyTextWidget(),
+            storyTextWidget(appState),
             Expanded(child: Container(), flex: 1),
-            TextButton(
+            MaterialButton(
               onPressed: () {
                 Navigator.of(context).pushReplacement(
                   PageTransition(
-                    child: StoryPartWidget(storyPart: choicePart.aStoryPart),
+                    child: StoryPartWidget(choicePart.aStoryPart),
                     type: PageTransitionType.fade
                   )
                 );
               }, 
               child: Text(
-                choicePart.aAnswer
+                choicePart.aAnswer.translations[appState.language]
               )
             ),
             SizedBox(height: 20),
-            TextButton(
+            MaterialButton(
               onPressed: () {
                 Navigator.of(context).pushReplacement(
                   PageTransition(
-                    child: StoryPartWidget(storyPart: choicePart.bStoryPart),
+                    child: StoryPartWidget(choicePart.bStoryPart),
                     type: PageTransitionType.fade
                   )
                 );
               }, 
               child: Text(
-                choicePart.bAnswer
+                choicePart.bAnswer.translations[appState.language]
               )
             ),
             Expanded(child: Container(), flex: 2),
@@ -125,15 +129,12 @@ class StoryPartWidget extends StatelessWidget {
   }
 
   Widget endGameWidget(BuildContext context, StoryPart storyPart) {
+    var appState = Provider.of<AppState>(context);
+
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
       onTap: () {
-        Navigator.of(context).pushReplacement(
-          PageTransition(
-            child: StoryPartWidget(storyPart: part1),
-            type: PageTransitionType.fade
-          )
-        );
+        Navigator.of(context).pop();
       },
       child: Container(
         child: Padding(
@@ -144,7 +145,7 @@ class StoryPartWidget extends StatelessWidget {
               Container(
                 height: MediaQuery.of(context).size.height / 5,
               ),
-              storyTextWidget(),
+              storyTextWidget(appState),
               Expanded(child: Container(), flex: 2),
             ],
           ),

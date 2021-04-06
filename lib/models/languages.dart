@@ -1,0 +1,4 @@
+enum Languages {
+  ru,
+  en
+}
