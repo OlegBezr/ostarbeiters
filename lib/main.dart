@@ -3,8 +3,13 @@ import 'package:ostarbeiters/models/app_state.dart';
 import 'package:ostarbeiters/models/languages.dart';
 import 'package:provider/provider.dart';
 import 'pages/menu_page.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  // SystemChrome.setEnabledSystemUIOverlays(
+  //   [SystemUiOverlay.bottom]
+  // );
   runApp(MyApp());
 }
 
@@ -15,11 +20,12 @@ class MyApp extends StatelessWidget {
       create: (context) => AppState(Languages.ru),
       builder: (context, widget) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: ThemeData(
             textTheme: TextTheme(
               bodyText1: TextStyle(
-                fontSize: 16
+                fontSize: 16,
               ),
             ),
             // textButtonTheme: TextButtonThemeData(
