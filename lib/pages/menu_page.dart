@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -17,9 +18,10 @@ class MenuPage extends StatefulWidget {
 }
 
 class _MenuPageState extends State<MenuPage> {
-  @override
-  void initState() {
-    super.initState();
+  AudioCache audioPlayer = AudioCache();
+
+  playAudio() async {
+    audioPlayer.play('audio/Мафиозник.mp3');
   }
 
   @override
@@ -169,7 +171,8 @@ class _MenuPageState extends State<MenuPage> {
                             child: Icon(Icons.volume_up)
                           ),
                           onTap: () {
-                            appState.update(appState.language == Languages.ru ? Languages.en : Languages.ru);
+                            playAudio();
+                            // appState.update(appState.language == Languages.ru ? Languages.en : Languages.ru);
                           },
                         )
                       ],
