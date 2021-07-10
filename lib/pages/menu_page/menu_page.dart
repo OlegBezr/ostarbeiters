@@ -6,11 +6,12 @@ import 'package:ostarbeiters/models/app_state.dart';
 import 'package:ostarbeiters/models/languages.dart';
 import 'package:ostarbeiters/models/multilanguage_text.dart';
 import 'package:ostarbeiters/pages/creators_page/creators_page.dart';
+import 'package:ostarbeiters/pages/menu_page/widgets/drawer.dart';
 import 'package:ostarbeiters/pages/stories_list_page/stories_list_page.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../constants.dart';
+import '../../constants.dart';
 
 class MenuPage extends StatefulWidget {
   @override
@@ -46,73 +47,7 @@ class _MenuPageState extends State<MenuPage> {
         backgroundColor: MyColors.mainYellow,
         drawer: Container(
           width: MediaQuery.of(context).size.width * 4 / 5,
-          child: Drawer(
-            child: Container(
-              color: MyColors.mainBlue,
-              child: SafeArea(
-                child: Builder(
-                  builder: (context) {
-                    var drawerTextStyle = TextStyle(
-                      color: Colors.white
-                    );
-
-                    return ListView(
-                      padding: EdgeInsets.zero,
-                      children: <Widget>[
-                        ListTile(
-                          title: Text(
-                            MultilanguageText.fromTexts('Правила игры', 'Game rules').translations[appState.language],
-                            style: drawerTextStyle,
-                          ),
-                          onTap: () {
-                          },
-                        ),
-                        ListTile(
-                          title: Text(
-                            MultilanguageText.fromTexts('Цели игры', 'Purpose of the game').translations[appState.language],
-                            style: drawerTextStyle,
-                          ),
-                          onTap: () {
-                          },
-                        ),
-                        ListTile(
-                          title: Text(
-                            MultilanguageText.fromTexts('Больше об остарбайтерах', 'More on ostarbeiters').translations[appState.language],
-                            style: drawerTextStyle,
-                          ),
-                          onTap: () {
-                          },
-                        ),
-                        ListTile(
-                          title: Text(
-                            MultilanguageText.fromTexts('О создателях', 'About the creators').translations[appState.language],
-                            style: drawerTextStyle,
-                          ),
-                          onTap: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (_) {
-                                  return CreatorsPage();
-                                }
-                              )
-                            );
-                          },
-                        ),
-                        ListTile(
-                          title: Text(
-                            MultilanguageText.fromTexts('Написать нам', 'Contact us').translations[appState.language],
-                            style: drawerTextStyle,
-                          ),
-                          onTap: () {
-                          },
-                        ),
-                      ],
-                    );
-                  }
-                ),
-              ),
-            ),
-          ),
+          child: MenuPageDrawer()
         ),
         body: Builder(
           builder: (context) {

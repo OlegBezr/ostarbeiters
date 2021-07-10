@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ostarbeiters/models/app_state.dart';
 import 'package:ostarbeiters/models/languages.dart';
 import 'package:provider/provider.dart';
-import 'pages/menu_page.dart';
+import 'pages/menu_page/menu_page.dart';
 import 'package:flutter/services.dart';
 
 void main() {

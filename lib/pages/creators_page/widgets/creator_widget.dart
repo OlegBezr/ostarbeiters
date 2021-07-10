@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:ostarbeiters/constants.dart';
+import 'package:ostarbeiters/models/app_state.dart';
+import 'package:ostarbeiters/models/multilanguage_text.dart';
+import 'package:provider/provider.dart';
 
 class CreatorWidget extends StatelessWidget {
   CreatorWidget({this.name, this.bio, this.imageAsset});
 
-  final String name;
-  final String bio;
+  final MultilanguageText name;
+  final MultilanguageText bio;
   final String imageAsset;
 
   @override
   Widget build(BuildContext context) {
+    var appState = Provider.of<AppState>(context);
+
     return Container(
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,9 +31,9 @@ class CreatorWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(name, style: TextStyle(color: MyColors.mainYellow, fontWeight: FontWeight.bold),),
+                Text(name.translations[appState.language], style: TextStyle(color: MyColors.mainYellow, fontWeight: FontWeight.bold),),
                 SizedBox(height: 5,),
-                Text(bio,  style: TextStyle(color: Colors.white),)
+                Text(bio.translations[appState.language],  style: TextStyle(color: Colors.white),)
                 // Text(bio)
               ],
             ),
