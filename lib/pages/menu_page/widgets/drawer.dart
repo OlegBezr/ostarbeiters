@@ -58,7 +58,7 @@ class MenuPageDrawer extends StatelessWidget {
                   ),
                   ListTile(
                     title: Text(
-                      MultilanguageText.fromTexts('Больше об остарбайтерах', 'More on ostarbeiters').translations[appState.language],
+                      MultilanguageText.fromTexts('Больше об остарбайтерах', 'More on Ostarbeiters').translations[appState.language],
                       style: drawerTextStyle,
                     ),
                     onTap: () {

@@ -31,7 +31,7 @@ class HistoryPage extends StatelessWidget {
                 Text(
                   MultilanguageText.fromTexts(
                     'Кто такие остарбайтеры?',
-                    'Who are ostarbeiters?',
+                    'Who are Ostarbeiters?',
                   ).translations[appState.language],
                   style: TextStyle(color: Colors.white, fontSize: 16),
                 ),
@@ -55,7 +55,7 @@ class HistoryPage extends StatelessWidget {
                 Text(
                   MultilanguageText.fromTexts(
                     'После принудительной репатриации в Советский Союз остарбайтеры сначала попадали в ПФЛ или ПФП (проверочно-фильтрационные лагеря/пункты) и проходили многочисленные «чистки» в НКГБ, НКВД, организации со страшным названием СМЕРШ. Суд был прост: выжил? – значит, скорее всего, сотрудничал с немцами, помогал им. Подозрения в изменах оскорбляли людей: настрадавшиеся и скучавшие по Родине, они ожидали другого приёма..',
-                    'Upon their return, the ostarbeiters first went to the PFL or PFP (verification and filtration camps/points), after which they underwent numerous "cleansings" in the NKGB, NKVD and in an organization with the terrible name SMERSH. The trial was simple: if you survived, you must have collaborated with the Germans, helped them. Suspicions of the betrayal offended people: having suffered and missed their homeland, they expected a different welcome...',
+                    'Upon their return, the Ostarbeiters first went to the PFL or PFP (verification and filtration camps/points), after which they underwent numerous "cleansings" in the NKGB, NKVD and in an organization with the terrible name SMERSH. The trial was simple: if you survived, you must have collaborated with the Germans, helped them. Suspicions of the betrayal offended people: having suffered and missed their homeland, they expected a different welcome...',
                   ).translations[appState.language],
                   style: TextStyle(color: Colors.white, fontSize: 16),
                 ),
@@ -63,7 +63,7 @@ class HistoryPage extends StatelessWidget {
                 Text(
                   MultilanguageText.fromTexts(
                     'Многим также пришлось «искупать вину» на шахтах, например, в Донбассе, или в трудовой армии (форма наказания; трудовой повинности населения). Подозрительных» женщин также отправляли отбывать наказание в трудовую армию на должности поварих, поломоек. Но и тем, кого отпускали по домам, было не легче: постоянное давление и дискриминация как на государственном, так и на общественном и даже бытовом уровнях сильно усложняли жизнь.',
-                    'Many ostarbeiters had to "redeem themselves" in the mines, for example, in the Donbass, or in the labor army (a form of punishment; labor service of the population). "Suspicious" women were also sent to serve their sentences in the labor army as cooks and cleaners. But it was not easier for those who were allowed to go home: constant pressure and discrimination at both the state and public levels, and even at the household level, made life very difficult.',
+                    'Many Ostarbeiters had to "redeem themselves" in the mines, for example, in the Donbass, or in the labor army (a form of punishment; labor service of the population). "Suspicious" women were also sent to serve their sentences in the labor army as cooks and cleaners. But it was not easier for those who were allowed to go home: constant pressure and discrimination at both the state and public levels, and even at the household level, made life very difficult.',
                   ).translations[appState.language],
                   style: TextStyle(color: Colors.white, fontSize: 16),
                 ),
@@ -95,7 +95,7 @@ class HistoryPage extends StatelessWidget {
                 Text(
                   MultilanguageText.fromTexts(
                     'В 50-е годы, после смерти Сталина, гражданское положение остарбайтеров немного улучшилось. Тем не менее, лишь в 90-е годы, когда немецкий фонд «Память. Ответственность. Будущее» при участии Международного Мемориала начал выплачивать компенсации восточным рабочим при предъявлении каких-либо свидетельств пребывания в Германии, тема остовцев начала выходить на свет. В Международный Мемориал поступило около 400 тысяч писем от остарбайтеров. Так начала приоткрываться эта завеса истории...',
-                    'In the 50s, after the death of Stalin, the civil position of the ostarbeiters improved slightly. However, only in the 90s, when the German foundation “Memory. Responsibility. Future" with the support of the International Memorial began to pay reparations to the eastern workers who presented any evidence of their stay in Germany, the issue started to come to light. The International Memorial received about 400 thousand letters from the former ostarbeiters. So, this veil of history began to open...',
+                    'In the 50s, after the death of Stalin, the civil position of the Ostarbeiters improved slightly. However, only in the 90s, when the German foundation “Memory. Responsibility. Future" with the support of the International Memorial began to pay reparations to the eastern workers who presented any evidence of their stay in Germany, the issue started to come to light. The International Memorial received about 400 thousand letters from the former Ostarbeiters. So, this veil of history began to open...',
                   ).translations[appState.language],
                   style: TextStyle(color: Colors.white, fontSize: 16),
                 ),
@@ -103,7 +103,7 @@ class HistoryPage extends StatelessWidget {
                 Text(
                   MultilanguageText.fromTexts(
                     'Больше об остарбайтерах',
-                    'More on ostarbeiters',
+                    'More on Ostarbeiters',
                   ).translations[appState.language],
                   style: TextStyle(color: Colors.white, fontSize: 16),
                 ),
