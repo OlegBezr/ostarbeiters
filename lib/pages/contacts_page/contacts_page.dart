@@ -14,7 +14,7 @@ class ContactsPage extends StatelessWidget {
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
       onTap: () {
-        // TODO: unfocus
+        FocusScope.of(context).unfocus();
       },
       child: Scaffold(
         backgroundColor: MyColors.mainBlueLight,

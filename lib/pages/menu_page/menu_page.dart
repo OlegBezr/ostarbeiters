@@ -1,11 +1,9 @@
-import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:ostarbeiters/models/app_state.dart';
 import 'package:ostarbeiters/models/languages.dart';
 import 'package:ostarbeiters/models/multilanguage_text.dart';
-import 'package:ostarbeiters/pages/creators_page/creators_page.dart';
 import 'package:ostarbeiters/pages/menu_page/widgets/drawer.dart';
 import 'package:ostarbeiters/pages/stories_list_page/stories_list_page.dart';
 import 'package:provider/provider.dart';
@@ -19,12 +17,6 @@ class MenuPage extends StatefulWidget {
 }
 
 class _MenuPageState extends State<MenuPage> {
-  AudioCache audioPlayer = AudioCache();
-
-  playAudio() async {
-    audioPlayer.play('audio/Мафиозник.mp3');
-  }
-
   @override
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays(
@@ -84,7 +76,7 @@ class _MenuPageState extends State<MenuPage> {
                             ),
                           ),
                           onTap: () {
-                            appState.update(appState.language == Languages.ru ? Languages.en : Languages.ru);
+                            appState.updateLanguage(appState.language == Languages.ru ? Languages.en : Languages.ru);
                           },
                         )
                       ],
@@ -103,11 +95,10 @@ class _MenuPageState extends State<MenuPage> {
 
                               )
                             ),
-                            child: Icon(Icons.volume_up)
+                            child: Icon(appState.soundOn? Icons.volume_up: Icons.volume_mute)
                           ),
                           onTap: () {
-                            playAudio();
-                            // appState.update(appState.language == Languages.ru ? Languages.en : Languages.ru);
+                            appState.changeSoundOn();
                           },
                         )
                       ],
