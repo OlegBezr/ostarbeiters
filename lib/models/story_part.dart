@@ -3,12 +3,13 @@ import 'package:ostarbeiters/models/multilanguage_text.dart';
 
 class StoryPart {
   MultilanguageText text;
-  MultilanguageData<String> textSound;
+  MultilanguageText textSound;
+  MultilanguageText historicalNote;
   String imageAsset;
   String heroAsset;
   String heroesAsset;
 
-  StoryPart({this.text, this.textSound, this.imageAsset, this.heroAsset,this.heroesAsset});
+  StoryPart({this.text, this.textSound, this.historicalNote, this.imageAsset, this.heroAsset,this.heroesAsset});
 }
 
 class LinearPart extends StoryPart {
@@ -17,7 +18,8 @@ class LinearPart extends StoryPart {
   LinearPart(
     {
       MultilanguageText text,
-      MultilanguageData<String> textSound,
+      MultilanguageText textSound,
+      MultilanguageText historicalNote,
       String imageAsset,
       String heroAsset,
       String heroesAsset,
@@ -26,6 +28,7 @@ class LinearPart extends StoryPart {
   ): super(
     text: text, 
     textSound: textSound,
+    historicalNote: historicalNote,
     imageAsset: imageAsset, 
     heroAsset: heroAsset,
     heroesAsset: heroesAsset
@@ -43,7 +46,8 @@ class ChoicePart extends StoryPart {
   ChoicePart(
     {
       MultilanguageText text, 
-      MultilanguageData<String> textSound, 
+      MultilanguageText textSound, 
+      MultilanguageText historicalNote,
       String imageAsset, 
       String heroAsset,
       String heroesAsset,
@@ -57,6 +61,7 @@ class ChoicePart extends StoryPart {
   ): super(
     text: text,
     textSound: textSound,
+    historicalNote: historicalNote,
     imageAsset: imageAsset,
     heroAsset: heroAsset,
     heroesAsset: heroesAsset
