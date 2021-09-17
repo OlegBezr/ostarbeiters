@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:ostarbeiters/models/multilanguage_text.dart';
 
 class StoryPart {
@@ -17,14 +18,14 @@ class LinearPart extends StoryPart {
 
   LinearPart(
     {
-      MultilanguageText text,
-      MultilanguageText textSound,
+      @required MultilanguageText text,
+      @required MultilanguageText textSound,
       MultilanguageText historicalNote,
       MultilanguageText historicalNoteSound,
-      String imageAsset,
+      @required String imageAsset,
       String heroAsset,
       String heroesAsset,
-      this.nextStoryPart
+      @required this.nextStoryPart
     }
   ): super(
     text: text, 
@@ -51,15 +52,15 @@ class ChoicePart extends StoryPart {
       MultilanguageText textSound, 
       MultilanguageText historicalNote,
       MultilanguageText historicalNoteSound,
-      String imageAsset, 
+      @required String imageAsset, 
       String heroAsset,
       String heroesAsset,
-      this.aAnswer,
-      this.bAnswer,
-      this.aTextSound,
-      this.bTextSound,
-      this.aStoryPart,
-      this.bStoryPart
+      @required this.aAnswer,
+      @required this.bAnswer,
+      @required this.aTextSound,
+      @required this.bTextSound,
+      @required this.aStoryPart,
+      @required this.bStoryPart
     }
   ): super(
     text: text,

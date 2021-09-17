@@ -170,6 +170,7 @@ var part10 = ChoicePart(
     "No, they’ll (mp3cut.net).m4a"
   ),
   aStoryPart: part11,
+  bStoryPart: part13,
   imageAsset: 'farm.png',
   heroAsset: "ivan.png",
 );
@@ -207,5 +208,93 @@ var part12 = LinearPart(
   ),
   imageAsset: 'camp.png',
   heroAsset: "ivan.png",
+  nextStoryPart: part14
+);
+
+var part13 = LinearPart(
+  text: MultilanguageText.fromTexts(
+    "Вы решаете не убегать, и на следующий день вас возвращают обратно в лагерь.",
+    "You decided against escaping and return to the camp."
+  ),
+  textSound: MultilanguageText.fromTexts(
+    "Вы решаете не убегать.m4a",
+    "You decided.m4a"
+  ),
+  imageAsset: "camp.png",
+  heroAsset: "ivan.png",
+  nextStoryPart: part14
+);
+
+var part14 = LinearPart(
+  text: MultilanguageText.fromTexts(
+    "Вдруг вас с другими рабочими собирают и везут в Бухенвальд строить новые корпуса. Через какое-то время вам предлагают уехать поработать на завод в Веймаре. Соглашаться?",
+    "You are taken to Buchenwald concentration camp to build new barracks. After some time you are given an option to go work at a factory in Weimar. Do you go for it?"
+  ),
+  textSound: MultilanguageText.fromTexts(
+    "Вдруг вас.m4a",
+    "You are taken.m4a"
+  ),
+  imageAsset: "empty.png",
+  heroesAsset: "friends.png",
+  heroAsset: "ivan.png",
+  nextStoryPart: part15
+);
+
+var part15 = ChoicePart(
+  aAnswer: MultilanguageText.fromTexts(
+    "Да, это позволит хоть как-то сменить обстановку - постоянное нахождение в одном месте давит на вас. К тому же, на заводе должно быть посвободнее, чем в Бухенвальде.",
+    "Yes, at least it's a change. It might be easier than here at the camp, too."  
+  ),
+  aTextSound: MultilanguageText.fromTexts(
+    "Да, это позволит.m4a",
+    "Yes, at least.m4a"
+  ),
+  bAnswer: MultilanguageText.fromTexts(
+    "Нет, кто знает, что будет на заводе? Здесь, в лагере, у вас уже есть друзья, в том числе и врачи, которые стараются заботиться о вас. В Веймаре такого может не быть.",
+    "No, who knows what the conditions will be? Here at the camp you have friends, and the doctors try to take care of you."
+  ),
+  bTextSound: MultilanguageText.fromTexts(
+    "Нет, кто знает.m4a",
+    "No, who knows.m4a"
+  ),
+  aStoryPart: part16,
+  imageAsset: "empty.png",
+  heroAsset: "ivan.png"
+);
+
+var part16 = LinearPart(
+  text: MultilanguageText.fromTexts(
+    "Поначалу вам неплохо на заводе, но кормят вас неважно, а потом начинают увеличивать норму работ. В какой-то момент вы понимаете, что не чувствуете достаточно сил, чтобы ее выполнять. Что делать?",
+    "At first its fine at the factory, but the food is scarce and the workload is growing. At one point you feel its physically impossible for you to complete it. What do you do?"
+  ),
+  textSound: MultilanguageText.fromTexts(
+    "Поначалу вам неплохо.m4a",
+    "At first.m4a"
+  ),
+  imageAsset: "factory.png",
+  heroAsset: "ivan.png",
+  nextStoryPart: part17
+);
+
+var part17 = ChoicePart(
+  aAnswer: MultilanguageText.fromTexts(
+    "Сказать начальнику, что больше физически не можете выполнять норму по производству.",
+    "You tell the head of the factory you can't cope with the workload."
+  ), 
+  aTextSound: MultilanguageText.fromTexts(
+    "Сказать начальнику.m4a",
+    "You tell the head.m4a"
+  ), 
+  bAnswer: MultilanguageText.fromTexts(
+    "Попытаться как-то выполнить норму, даже если очень тяжело, ведь иначе могут наказать.",
+    "You try to struggle through coping with the workload."
+  ),
+  bTextSound: MultilanguageText.fromTexts(
+    "Попытаться как-то.m4a",
+    "You try to struggle.m4a"
+  ),
+  imageAsset: "factory.png",
+  heroAsset: "ivan.png", 
+  heroesAsset: "commander.png"
 );
 
