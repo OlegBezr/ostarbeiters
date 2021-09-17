@@ -249,21 +249,27 @@ class _StoryPartWidgetState extends State<StoryPartWidget> {
                   child: GestureDetector(
                     behavior: HitTestBehavior.translucent,
                     child: Icon(CupertinoIcons.question_circle, color: MyColors.mainBlue, size: 30,), 
-                    onTap: () {
-                    showModalBottomSheet(context: context, builder: (_) {
-                      return Container(
-                        padding: EdgeInsets.all(20),
-                        child: Text(
-                          widget.storyPart.historicalNote.translations[appState.language],
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 18.0,
-                            fontFamily: 'Agne',
-                          ),
-                        )
+                    onTap: () async {
+                      showModalBottomSheet(context: context, builder: (_) {
+                        return Container(
+                          padding: EdgeInsets.all(20),
+                          child: Text(
+                            widget.storyPart.historicalNote.translations[appState.language],
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 18.0,
+                              fontFamily: 'Agne',
+                            ),
+                          )
+                        ); 
+                      });
+                      _player = await _cache.play(
+                        'story_content/shared/historical_notes/${
+                          widget.storyPart.historicalNoteSound.translations[appState.language]
+                        }'
                       ); 
-                    });
-                  })
+                    }
+                  )
                 )
             ],
           ),
