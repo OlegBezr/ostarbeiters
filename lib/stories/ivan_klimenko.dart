@@ -1,4 +1,3 @@
-import 'package:ostarbeiters/models/multilanguage_data.dart';
 import 'package:ostarbeiters/models/multilanguage_text.dart';
 import 'package:ostarbeiters/models/story.dart';
 import 'package:ostarbeiters/models/story_part.dart';
@@ -33,6 +32,7 @@ var part2 = LinearPart(
     'A Polizei.m4a'
   ),
   historicalNote: MultilanguageText.fromTexts('', '*Polizei is German for policeman, the word was adopted on the occupied territories.'),
+  historicalNoteSound: MultilanguageText.fromTexts('', 'polizei.mp3'),
   imageAsset: 'house.png',
   heroAsset: 'ivan.png',
   heroesAsset: 'polizai.png',
@@ -75,7 +75,7 @@ var part4 = ChoicePart(
   heroAsset: 'ivan.png',
   heroesAsset: 'friends.png',
   aStoryPart: part5,
-  bStoryPart: part6,
+  bStoryPart: part7,
 );
 
 var part5 = LinearPart(
@@ -84,7 +84,7 @@ var part5 = LinearPart(
     "You escape with your friends. You walk along the railway and then into the forest."
   ),
   textSound: MultilanguageText.fromTexts(
-    "Вы решаете сбрежать.m4a",
+    "Вы решаете сбежать.m4a",
     "You escape.m4a"
   ),
   imageAsset: 'woods.png',
@@ -109,18 +109,103 @@ var part6 = LinearPart(
 );
 
 var part7 = LinearPart(
+  text: MultilanguageText.fromTexts(
+    "Вы решаете остаться в вагоне. Сначала вас привозят в лагерь в Польше для дезинфекции, а потом доставляют в Германию и отправляют на сбор урожая.",
+    "You stay in the train car. You first arrive at a camp in Poland and are then taken to Germany, in time for harvesting."
+  ),
+  textSound: MultilanguageText.fromTexts(
+    "Вы решаете остаться.m4a",
+    "You stay in the train car.m4a"
+  ),
+  imageAsset: 'trains.png',
+  heroAsset: "ivan.png",
+  heroesAsset: "friends.png",
   nextStoryPart: part8
 );
 
 var part8 = LinearPart(
+  text: MultilanguageText.fromTexts(
+    "Один раз, когда вас вместе с еще пятью рабочими отправляют строить ферму, вас не привозят назад в лагерь несколько дней.",
+    "You and a few of your new acquaintances are set to build a farm. You do not return to the camp for several days."
+  ),
+  textSound: MultilanguageText.fromTexts(
+    "Один раз.m4a",
+    "You and a few.m4a"
+  ),
+  imageAsset: 'farm.png',
+  heroAsset: "ivan.png",
+  heroesAsset: "friends.png",
   nextStoryPart: part9
 );
 
 var part9 = LinearPart(
+    text: MultilanguageText.fromTexts(
+    "На ваши вопросы надзиратели практически ничего не отвечают и говорят вам как-нибудь ночевать здесь. Это прекрасная возможность бежать. Что делать?",
+    "Your guards do not answer any questions and tell you to find a place to sleep. It's the perfect opportunity for escape. Do you take it?"
+  ),
+  textSound: MultilanguageText.fromTexts(
+    "На ваши вопросы.m4a",
+    "Your guards.m4a"
+  ),
+  imageAsset: 'farm.png',
+  heroAsset: "ivan.png",
   nextStoryPart: part10
 );
 
 var part10 = ChoicePart(
+  aAnswer: MultilanguageText.fromTexts(
+    "Да, конечно! Когда еще предоставится такая возможность? Тем более, ходят слухи, что во Франции действуют партизанские отряды, и можно попытаться добраться до них.",
+    "Of course! It's not every day we have this opportunity. There are rumours French guerrilla troops are not far away, we can try and reach them."
+  ),
+  bAnswer: MultilanguageText.fromTexts(
+    "Нет, вас все равно быстро хватятся и вернут назад, да еще и накажут.",
+    "No, they'll discover us quickly enough and there will be consequences."
+  ),
+  aTextSound: MultilanguageText.fromTexts(
+    "Да, конечно! когда ещё.m4a",
+    "Of course (mp3cut.net).m4a"
+  ),
+  bTextSound: MultilanguageText.fromTexts(
+    "Нет, вас все равно (mp3cut.net).m4a",
+    "No, they’ll (mp3cut.net).m4a"
+  ),
+  aStoryPart: part11,
+  imageAsset: 'farm.png',
+  heroAsset: "ivan.png",
+);
 
+var part11 = LinearPart(
+  text: MultilanguageText.fromTexts(
+    "Четверо суток вы двигаетесь ориентировочно в сторону Франции по ночам, прячась в траве днем. Вы питаетесь фруктами с деревьев, которые находите рядом с полями.", 
+    "For four days you move towards France: walking at night, and hiding during the day. You eat the berries and plants you find on the way."
+  ),
+  textSound: MultilanguageText.fromTexts(
+    "Четверо суток (mp3cut.net).m4a",
+    "For four days (mp3cut.net).m4a"
+  ),
+  nextStoryPart: part12,
+  imageAsset: 'field.png',
+  heroAsset: "ivan.png",
+);
+
+var part12 = LinearPart(
+  text: MultilanguageText.fromTexts(
+    "На пятые сутки, несмотря на ваши попытки спрятаться, вас находят немцы и приводят в гестапо. Там вас держат неделю, пытая, чтобы выяснить, не узнали ли вы чего-нибудь ненужного, а потом возвращают обратно в лагерь.", 
+    "On the fifth day you are discovered and sent to Gestapo. For a week you are detained and tortured to determine whether you have learned something you shouldn't have."
+  ),
+  textSound: MultilanguageText.fromTexts(
+    "На пятые сутки (mp3cut.net).m4a",
+    "On the fifth day (mp3cut.net).m4a"
+  ),
+  historicalNote: MultilanguageText.fromTexts(
+    "",
+    "Gestapo is the Nazi Secret State Police"
+  ),
+  historicalNoteSound: MultilanguageText.fromTexts(
+    "",
+    "gestapo.mp3"
+  ),
+  imageAsset: 'camp.png',
+  heroAsset: "ivan.png",
 );
 
