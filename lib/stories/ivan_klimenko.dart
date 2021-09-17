@@ -14,8 +14,8 @@ var part1 = LinearPart(
     'Your name is Ivan Klimenko, You are 18 years old. You live in a village near Lugansk.'
   ),
   textSound: MultilanguageText.fromTexts(
-    'Вас зовут Иван Клименко (mp3cut.net).m4a', 
-    'Your name (mp3cut.net).m4a'
+    'Вас зовут Иван Клименко.m4a', 
+    'Your name.m4a'
   ),
   imageAsset: 'empty.png',
   heroAsset: 'ivan.png',
@@ -28,7 +28,7 @@ var part2 = LinearPart(
     'A Polizei comes to your house. You must go to work to Germany. If you decline, there will be consequences for your family.'
   ),
   textSound: MultilanguageText.fromTexts(
-    'К вам в дом (mp3cut.net).m4a', 
+    'К вам в дом.m4a', 
     'A Polizei.m4a'
   ),
   historicalNote: MultilanguageText.fromTexts('', '*Polizei is German for policeman, the word was adopted on the occupied territories.'),
@@ -64,12 +64,12 @@ var part4 = ChoicePart(
     '"There is nowhere to go, West Ukraine has been occupied by the Nazis since the autumn. We\'ll be captured and returned, and it won\'t end well for us."'
   ),
   aTextSound: MultilanguageText.fromTexts(
-    'А давайте рискнем (mp3cut.net).m4a',
-    'I’ll take the risk (mp3cut.net).m4a'
+    'А давайте рискнем.m4a',
+    'I’ll take the risk.m4a'
   ),
   bTextSound: MultilanguageText.fromTexts(
-    'Бежать некуда (mp3cut.net).m4a',
-    'There is nowhere (mp3cut.net).m4a'
+    'Бежать некуда.m4a',
+    'There is nowhere.m4a'
   ),
   imageAsset: 'trains.png',
   heroAsset: 'ivan.png',
