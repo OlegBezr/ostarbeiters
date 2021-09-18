@@ -258,6 +258,7 @@ var part15 = ChoicePart(
     "No, who knows.m4a"
   ),
   aStoryPart: part16,
+  bStoryPart: part20,
   imageAsset: "empty.png",
   heroAsset: "ivan.png"
 );
@@ -293,8 +294,68 @@ var part17 = ChoicePart(
     "Попытаться как-то.m4a",
     "You try to struggle.m4a"
   ),
+  aStoryPart: part19,
+  bStoryPart: part18,
   imageAsset: "factory.png",
   heroAsset: "ivan.png", 
   heroesAsset: "commander.png"
+);
+
+var part18 = LinearPart(
+  text: MultilanguageText.fromTexts(
+    "Вы все равно не укладываетесь в норму, потому что обессилели из-за голода и постоянного переутомления.", 
+    "However, you can't cope due to attrition and fatigue."
+  ),
+  textSound: MultilanguageText.fromTexts(
+    "Вы все равно.m4a",
+    "However, you can’t cope.m4a"
+  ),
+  imageAsset: "factory.png",
+  heroAsset: "ivan.png",
+  nextStoryPart: part19
+);
+
+var part19 = LinearPart(
+  text: MultilanguageText.fromTexts(
+    "Начальник цеха пишет на вас докладную эсесовцам, и вас жестоко избивают. Неделю вы валяетесь в лагере при заводе, а после этого вас отправляют обратно в Бухенвальд. Там вам помогают врачи-заключенные, и вы потихоньку поправляетесь.", 
+    "The head of the factory writes a report about your behaviour and you are beaten for it. You are sent back to the concentration camp, where the doctors nurse you back to health."
+  ),
+  textSound: MultilanguageText.fromTexts(
+    "Начальник цеха.m4a",
+    "The head of the.m4a"
+  ),
+  imageAsset: "factory.png",
+  heroAsset: "ivan.png",
+  heroesAsset: "doctor.png",
+  nextStoryPart: part20
+);
+
+
+var part20 = LinearPart(
+  text: MultilanguageText.fromTexts(
+    "Американские войска подходят к лагерю, и немцы больше не водят вас на работы. Вскоре вас и других заключенных начинают партиями выгонять из бараков под предлогом эвакуации.",
+    "American troops are getting closer to the camp and the Nazis stop taking you to work. Instead, they start taking you out of the barracks in groups."
+  ),
+  textSound: MultilanguageText.fromTexts(
+    "Американские войска.m4a",
+    "American troops.m4a"
+  ),
+  imageAsset: "camp.png",
+  heroAsset: "ivan.png",
+  nextStoryPart: part21
+);
+
+var part21 = LinearPart(
+  text: MultilanguageText.fromTexts(
+    "Тем не менее, ваши знакомые из подпольной организации говорят вам, что следовать этим приказам нельзя, потому что вас всех хотят расстрелять. Как поступить?",
+    "Your friends from the underground resistance tell you not to follow the orders, as you are taken to be shot. What do you do?"
+  ),
+  textSound: MultilanguageText.fromTexts(
+    "Тем не менее, ваши знакомые.m4a",
+    "Your friends.m4a"
+  ),
+  imageAsset: "empty.png",
+  heroAsset: "ivan.png",
+  heroesAsset: "podpolniy.png",
 );
 
