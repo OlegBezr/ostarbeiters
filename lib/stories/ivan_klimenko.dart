@@ -357,5 +357,100 @@ var part21 = LinearPart(
   imageAsset: "empty.png",
   heroAsset: "ivan.png",
   heroesAsset: "podpolniy.png",
+  nextStoryPart: part22
+);
+
+var part22 = ChoicePart(
+  imageAsset: "empty.png",
+  heroAsset: "ivan.png",
+  aAnswer: MultilanguageText.fromTexts(
+    "Последовать приказам - неизвестно, насколько можно доверять знакомым из подпольной организации, ведь ходят слухи, что многие из них сотрудничают с эсесовцами.",
+    "I'll follow the orders: who knows if I can trust the guys from the resistance for there are rumors they are secretly working for the Nazis."
+  ),
+  bAnswer: MultilanguageText.fromTexts(
+    "Попытаться как-то избежать расстрела вместе с другими рабочими.",
+    "I'll try to escape with a couple of other workers."
+  ),
+  aTextSound: MultilanguageText.fromTexts(
+    "Последовать приказам.m4a",
+    "I’ll follow.m4a"
+  ), 
+  bTextSound: MultilanguageText.fromTexts(
+    "Попытаться как-то избежать.m4a",
+    "I’ll try to escape.m4a"
+  ), 
+  aStoryPart: part23,
+  bStoryPart: part24
+);
+
+var part23 = LinearPart(
+  text: MultilanguageText.fromTexts(
+    "Вы с еще несколькими заключенными выходите из барака, и вас расстреливают недалеко от лагеря.",
+    "You follow the group outside the barracks and are shot not far from the camp."
+  ),
+  textSound: MultilanguageText.fromTexts(
+    "Вы с еще несколькими.m4a",
+    "You follow the group.m4a"
+  ),
+  imageAsset: "forest.png",
+  heroAsset: "ivan.png",
+  nextStoryPart: null
+);
+
+var part24 = LinearPart(
+  text: MultilanguageText.fromTexts(
+    "Когда вас пытаются вывести из барака, вы вместе с другими рабочими разбегаетесь и прячетесь в лесу недалеко от лагеря. Вам удается избежать расстрела, однако вместо вас надзиратели убивают группу евреев, которые слишком слабы, чтобы убежать.",
+    "You make a run for it when taken outside the barracks. You hide in a nearby forest. In your place, the Nazis shoot a group of jews who are too weak to escape."
+  ),
+  textSound: MultilanguageText.fromTexts(
+    "Когда вас пытаются.m4a",
+    "You make a run.m4a"
+  ),
+  imageAsset: "empty.png",
+  heroesAsset: "jews.png",
+  nextStoryPart: part25,
+  heroAsset: "ivan.png",
+);
+
+var part25 = LinearPart(
+  text: MultilanguageText.fromTexts(
+    "Несколько дней вы прячетесь в лесу. Затем вы замечаете, что немцы начинают покидать лагерь. Вы вместе с другими рабочими, оставшимися в живых, возвращаетесь обратно, члены подпольной организации организовывают распределение продуктов и охрану лагеря.",
+    "You hide in the forest for a couple of days. When you see Nazis have fled the camp and the underground resistance took charge, you return."
+  ),
+  textSound: MultilanguageText.fromTexts(
+    "Несколько дней вы прячетесь.m4a",
+    "You hide.m4a"
+  ),
+  imageAsset: "forest.png",
+  heroAsset: "ivan.png",
+  nextStoryPart: part26
+);
+
+var part26 = LinearPart(
+  text: MultilanguageText.fromTexts(
+    "На следующий день к вам приезжают американцы - ваш лагерь окончательно освобожден.",
+    "American forces arrive the next day: the territory has finally been liberated."
+  ), 
+  textSound: MultilanguageText.fromTexts(
+    "На следующий день.m4a",
+    "American forces arrive.m4a"
+  ),
+  imageAsset: "camp.png",
+  heroesAsset: "us_soldier.png",
+  heroAsset: "ivan.png",
+  nextStoryPart: part27
+);
+
+var part27 = LinearPart(
+  text: MultilanguageText.fromTexts(
+    "Через несколько дней вам надоедает торчать в лагере: вы давно не были на свободе, и вам хочется выйти хотя бы куда-нибудь. Тем более, еды в лагере мало, и вам кажется, что ее можно попросить у местных жителей в соседней деревне. Нужно ли покидать лагерь?",
+    "You quickly get bored of staying in the camp: you want to experience the full freedom again, go outside. More to it, there is scarcely any food, and you think the people in the neighbouring village can be kind enough to share some. Do you leave the camp?"
+  ),
+  textSound: MultilanguageText.fromTexts(
+    "Через несколько дней.m4a",
+    "You quickly get bored.m4a",
+  ),
+  imageAsset: "camp.png",
+  heroAsset: "ivan.png",
 );
 
