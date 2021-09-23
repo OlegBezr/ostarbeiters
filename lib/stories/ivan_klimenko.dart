@@ -454,3 +454,134 @@ var part27 = LinearPart(
   heroAsset: "ivan.png",
 );
 
+var part28 = ChoicePart(
+  imageAsset: "camp.png",
+  heroAsset: "ivan.png",
+  aAnswer: MultilanguageText.fromTexts(
+    "Да, конечно! Все равно тут от вас никакой пользы.",
+    "Of course! It's not like I'm much help around here."
+  ), 
+  bAnswer: MultilanguageText.fromTexts(
+    "Нет, вдруг нужна будет помощь здесь? Тем более, еду, наверное, скоро привезут американские войска, которые вас освободили.",
+    "No, what if they need me for something. Also, the food may just as well be brought by the Americans soon."
+  ),
+  aTextSound: MultilanguageText.fromTexts(
+    "Да, конечно! всё равно.m4a",
+    "No, what if.m4a"
+  ),
+  bTextSound: MultilanguageText.fromTexts(
+    "Нет, вдруг нужна будет помощь здесь.m4a",
+    "No, what if.m4a"
+  ),
+  aStoryPart: part29,
+  bStoryPart: part32
+);
+
+var part29 = LinearPart(
+  text: MultilanguageText.fromTexts(
+    "Вы с несколькими друзьями доходите до деревни, но там вас останавливают несколько американских военных. Они боятся, что вы устроите разбой в деревне, так как у вас есть оружие, и поэтому вас отправляют обратно в лагерь.",
+    "You walk towards the village, but are stopped by a couple of American soldiers: they notice you carry arms and send you back to the camp worried that you would start looting."
+  ),
+  textSound: MultilanguageText.fromTexts(
+    "Вы с несколькими друзьями.m4a",
+    "You walk.m4a"
+  ),
+  imageAsset: "street.png",
+  heroAsset: "ivan.png",
+  heroesAsset: "us_soldier.png",
+  nextStoryPart: part30
+);
+
+var part30 = LinearPart(
+  text: MultilanguageText.fromTexts(
+    "Тем не менее, один из солдат передает командованию, что вам надо доставить еду, и вскоре ее привозят в лагерь.",
+    "However, one of the soldiers notes your request for food and it is promptly brought to the camp."
+  ),
+  textSound: MultilanguageText.fromTexts(
+    "Тем не менее, один.m4a",
+    "However.m4a"
+  ),
+  imageAsset: "camp.png",
+  nextStoryPart: part32
+);
+
+var part31 = LinearPart(
+  text: MultilanguageText.fromTexts(
+    "Коммуникация с американскими войсками налажена плохо, и, к тому же, у бывшей подпольной организации очень много хлопот, и поэтому вам еще долго не доставляют еду.",
+    "There is little communication with the Americans and the underground resistance is preoccupied with a number of problems, so the food does not appear for quite some time."
+  ),
+  textSound: MultilanguageText.fromTexts(
+    "Коммуникация.m4a",
+    "There is little.m4a"
+  ),
+  imageAsset: "camp.png",
+  nextStoryPart: part32
+);
+
+var part32 = LinearPart(
+  text: MultilanguageText.fromTexts(
+    "После окончательного поражения Германии вам не дают выбора - вы возвращаетесь в СССР. Сначала вы перегоняете скот на родину и сопровождаете людей, возвращающихся в СССР, а потом вас отправляют на Сахалин, где вы 2 года работаете слесарем. В 1947 вам предлагают либо отправиться домой, либо остаться работать здесь. Что выбрать?",
+    "After the fall of Germany you are sent back to the USSR. First your job is to driving in the cattle back to the Soviet Union and accompany the citizens returning home. Then you are sent to Sakhalin for two years to work as a locksmith. In 1947 you are given a choice: return home or remain in Sakhalin. What do you do?"
+  ),
+  textSound: MultilanguageText.fromTexts(
+    "После окончательного.m4a",
+    "After the fall.m4a"
+  ),
+  imageAsset: "empty.png",
+  heroAsset: "ivan.png",
+  nextStoryPart: part33
+);
+
+var part33 = ChoicePart(
+  imageAsset: "empty.png",
+  aAnswer: MultilanguageText.fromTexts(
+    "Конечно, вернуться домой! Вы не видели родителей уже много лет.", 
+    "I'll return home, of course. I haven't seen my parents in years."
+  ), 
+  bAnswer: MultilanguageText.fromTexts(
+    "Остаться здесь. Вы боитесь, что на родине вас опознают как \"оста\" - ходят слухи, что таких людей преследуют.", 
+    "I'll stay in Sakhalin. I heared, back in Lugansk they are very suspicious towards former Osterbeiters."
+  ),
+  aTextSound: MultilanguageText.fromTexts(
+    "Конечно.m4a",
+    "I’ll return home.m4a"
+  ),
+  bTextSound: MultilanguageText.fromTexts(
+    "Остаться здесь.m4a",
+    "I’ll stay.m4a"
+  ),
+  aStoryPart: part34,
+  bStoryPart: part35
+);
+
+var part34 = LinearPart(
+  text: MultilanguageText.fromTexts(
+    "Вы возвращаетесь домой, родители встречают вас со слезами на глазах. В местном отделе КГБ вам говорят, что знают, что вы уехали не по своей воле. Вы очень скоро обустраиваете спокойную жизнь на родине, но воспоминания о работе в Германии не покидают вас всю жизнь.",
+    "You return home, and your parents are weeping from happiness. In the local KGB unit you are told that your situation was involuntary and fully understood. You lead a peaceful life in your hometown, however the memories of Germany never fully fade."
+  ),
+  textSound: MultilanguageText.fromTexts(
+    "Вы возвращаетесь.m4a",
+    "You return home.m4a"
+  ),
+  imageAsset: "home.png",
+  heroAsset: "ivan.png",
+  heroesAsset: "parents.png",
+  nextStoryPart: null
+);
+
+var part35 = LinearPart(
+  text: MultilanguageText.fromTexts(
+    "Вы так и не возвращаетесь домой и общаетесь с родителями только при помощи писем.",
+    "You stay in Sakhalin and never return home. You occasionally exchange letters with your parents."
+  ),
+  textSound: MultilanguageText.fromTexts(
+    "Вы так и.m4a",
+    "You stay.m4a"
+  ),
+  imageAsset: "empty.png",
+  heroAsset: "ivan.png",
+  nextStoryPart: null
+);
+
+
+
