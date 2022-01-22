@@ -99,15 +99,7 @@ class HistoryPage extends StatelessWidget {
                   ).translations[appState.language],
                   style: TextStyle(color: Colors.white, fontSize: 16),
                 ),
-                SizedBox(height: 30),
-                Text(
-                  MultilanguageText.fromTexts(
-                    'Больше об остарбайтерах',
-                    'More on Ostarbeiters',
-                  ).translations[appState.language],
-                  style: TextStyle(color: Colors.white, fontSize: 16),
-                ),
-                SizedBox(height: 30),
+                SizedBox(height: 10),
               ]
             )
           )

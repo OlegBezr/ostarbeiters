@@ -5,7 +5,7 @@ import 'package:ostarbeiters/models/multilanguage_text.dart';
 import 'package:ostarbeiters/pages/contacts_page/contacts_page.dart';
 import 'package:ostarbeiters/pages/creators_page/creators_page.dart';
 import 'package:ostarbeiters/pages/goals_page/goals_page.dart';
-import 'package:ostarbeiters/pages/history_page/history_page.dart';
+import 'package:ostarbeiters/pages/more_about_page/more_about_page.dart';
 import 'package:ostarbeiters/pages/rules_page/rules_page.dart';
 import 'package:provider/provider.dart';
 
@@ -65,7 +65,7 @@ class MenuPageDrawer extends StatelessWidget {
                       Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (_) {
-                            return HistoryPage();
+                            return MoreAboutPage();
                           }
                         )
                       );

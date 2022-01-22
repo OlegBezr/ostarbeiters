@@ -15,7 +15,7 @@ class StoryCard extends StatelessWidget {
 
     return MaterialButton(
       onPressed: () {
-        Navigator.of(context).pushReplacement(
+        Navigator.of(context).push(
           MaterialPageRoute(builder: (context) {
             return GamePage(story);
           })

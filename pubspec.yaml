@@ -38,6 +38,7 @@ dependencies:
   url_launcher: ^6.0.3
 
   provider: ^5.0.0
+  shared_preferences: ^2.0.12
 
 dev_dependencies:
   flutter_test:
@@ -58,7 +59,7 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/creators/
-    - assets/story_content/shared/historical_notes
+    - assets/story_content/shared/historical_notes/
     # IVAN KLIMENKO
     - assets/story_content/ivan_klimenko/
     - assets/story_content/ivan_klimenko/audio/

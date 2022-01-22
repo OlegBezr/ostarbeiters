@@ -1,10 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:ostarbeiters/models/app_state.dart';
 import 'package:ostarbeiters/models/languages.dart';
 import 'package:ostarbeiters/models/multilanguage_text.dart';
 import 'package:ostarbeiters/pages/menu_page/widgets/drawer.dart';
+import 'package:ostarbeiters/pages/history_page/history_page.dart';
 import 'package:ostarbeiters/pages/stories_list_page/stories_list_page.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -200,7 +200,11 @@ class _MenuPageState extends State<MenuPage> {
                         textAlign: TextAlign.center,
                       ),
                       onPressed: () {
-
+                        Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) {
+                            return HistoryPage();
+                          })
+                        );
                       },
                     ),
                     Padding(
@@ -209,6 +213,15 @@ class _MenuPageState extends State<MenuPage> {
                         highlightColor: Colors.transparent,
                         splashColor: Colors.transparent,
                         child: Container(
+                          padding: EdgeInsets.fromLTRB(10, 7, 10, 4),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            border: Border.all(
+                              color: Colors.white,
+                              width: 2
+                            ),
+                            color: Colors.white
+                          ),
                           height: 50,
                           child: Image.asset(
                             'assets/icons/letovo_icon_and_text.png'

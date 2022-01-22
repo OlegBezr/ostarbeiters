@@ -48,7 +48,7 @@ class CreatorsPage extends StatelessWidget {
                   name: MultilanguageText.fromTexts('Елизавета Золототрубова', 'Elizaveta Zolototrubova'),
                   bio:  MultilanguageText.fromTexts(
                     'Зачинатель и участница многих исторических и социальных проектов, таких, как статья об остарбайтерах "Полвека молчания" (см. раздел "Больше об остарбайтерах"). Инициатор проекта создания игры-новеллы "Остарбайтеры".',
-                    'The creator and participant of multiple historical and social projects, such as the article about the Ostarbeiters called "Half a century of silence" (see the panel "More on the Ostarbeiters"). The initiator of the game-novella "Ostarbeitery".',
+                    'The creator and participant of multiple historical and social projects, such as the article about the Ostarbeiters called "Half a century of silence" (see the panel "More on the Ostarbeiters"). The initiator of the game-novella "Ostarbeiters".',
                   ),
                   imageAsset: 'assets/images/creators/lisa.png',
                 ),
@@ -66,7 +66,7 @@ class CreatorsPage extends StatelessWidget {
                   name: MultilanguageText.fromTexts('Индира Абзалова', 'Indira Abzalova'),
                   bio: MultilanguageText.fromTexts(
                     'Зачинатель и участница многих социальных проектов, в числе которых постановка спектакля "Осколки", основанного на реальных исторических событиях, и участие в разработке игры-новеллы "Остарбайтеры".',
-                    'The creator and participant of multiple social projects, including the direction of the play "Fragments" based on true historical eventы (1917 events in Russia). The participant of the creation of the game-novella "Ostarbeitery".'
+                    'The creator and participant of multiple social projects, including the direction of the play "Fragments" based on true historical eventы (1917 events in Russia). The participant of the creation of the game-novella "Ostarbeiters".'
                   ),
                   imageAsset: 'assets/images/creators/indira.png'
                 ),

@@ -163,11 +163,11 @@ var part10 = ChoicePart(
   ),
   aTextSound: MultilanguageText.fromTexts(
     "Да, конечно! когда ещё.m4a",
-    "Of course (mp3cut.net).m4a"
+    "Of course.m4a"
   ),
   bTextSound: MultilanguageText.fromTexts(
-    "Нет, вас все равно (mp3cut.net).m4a",
-    "No, they’ll (mp3cut.net).m4a"
+    "Нет, вас все равно.m4a",
+    "No, they’ll.m4a"
   ),
   aStoryPart: part11,
   bStoryPart: part13,
@@ -181,8 +181,8 @@ var part11 = LinearPart(
     "For four days you move towards France: walking at night, and hiding during the day. You eat the berries and plants you find on the way."
   ),
   textSound: MultilanguageText.fromTexts(
-    "Четверо суток (mp3cut.net).m4a",
-    "For four days (mp3cut.net).m4a"
+    "Четверо суток.m4a",
+    "For four days.m4a"
   ),
   nextStoryPart: part12,
   imageAsset: 'field.png',
@@ -195,8 +195,8 @@ var part12 = LinearPart(
     "On the fifth day you are discovered and sent to Gestapo. For a week you are detained and tortured to determine whether you have learned something you shouldn't have."
   ),
   textSound: MultilanguageText.fromTexts(
-    "На пятые сутки (mp3cut.net).m4a",
-    "On the fifth day (mp3cut.net).m4a"
+    "На пятые сутки.m4a",
+    "On the fifth day.m4a"
   ),
   historicalNote: MultilanguageText.fromTexts(
     "",
@@ -452,6 +452,7 @@ var part27 = LinearPart(
   ),
   imageAsset: "camp.png",
   heroAsset: "ivan.png",
+  nextStoryPart: part28
 );
 
 var part28 = ChoicePart(
@@ -534,6 +535,7 @@ var part32 = LinearPart(
 
 var part33 = ChoicePart(
   imageAsset: "empty.png",
+  heroAsset: "ivan.png",
   aAnswer: MultilanguageText.fromTexts(
     "Конечно, вернуться домой! Вы не видели родителей уже много лет.", 
     "I'll return home, of course. I haven't seen my parents in years."
@@ -563,7 +565,7 @@ var part34 = LinearPart(
     "Вы возвращаетесь.m4a",
     "You return home.m4a"
   ),
-  imageAsset: "home.png",
+  imageAsset: "house.png",
   heroAsset: "ivan.png",
   heroesAsset: "parents.png",
   nextStoryPart: null
@@ -582,6 +584,3 @@ var part35 = LinearPart(
   heroAsset: "ivan.png",
   nextStoryPart: null
 );
-
-
-
